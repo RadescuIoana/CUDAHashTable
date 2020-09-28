@@ -75,4 +75,4 @@ Rădescu Ioana
 		a performatei obtinute.
 		Din output-ul obtinut se observa ca performanta scade in momentul in care este necesara 	
 		realizarea unei operatii de reshape. 
-		Totodata, aceasta depinde si numarul de iteratii necesare la inserare sau cautare.
+		Totodata, aceasta depinde si de numarul de iteratii necesare la inserare sau cautare.
