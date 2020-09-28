@@ -1,10 +1,10 @@
 Rădescu Ioana
-333CB
 
-# Tema 3 -- CUDA HashTable  --
+# CUDA HashTable
+	
+	Acest proiect urmareste implementarea unei structuri de date tip hashtable folosind CUDA, avand ca target GPU Tesla K40.
 
-
-- Implementare
+# Implementare
 
 	Pentru crearea unei intrari din HashTable am definit urmatoarea structura: 
 		typedef struct {
@@ -29,14 +29,14 @@ Rădescu Ioana
 		Pentru a obtine valorile asociate unor anumite chei in tabela de hash se realizeaza o
 	parcurgere similara.
 
-- Cum se stochează hashtable în memoria GPU VRAM?
+# Cum se stochează hashtable în memoria GPU VRAM?
 
 		Pentru alocarea vectorului de structuri ce formeaza HashTable-ul s-a folosit functia
 	cudaMalloc().
 	Astfel, in memoria GPU VRAM se vor stoca datele din tabela, in timp ce in RAM va fi salvata
 	doar adresa de inceput a acestui vector.
 
-- Output la performanțele obținute
+# Output la performanțele obținute
 -------------- Test T1 --------------
 OK       +10 pts         HASH_BATCH_INSERT, 1000000, inf, 80
 OK       +10 pts         HASH_BATCH_GET, 1000000, 100, 80.0051
