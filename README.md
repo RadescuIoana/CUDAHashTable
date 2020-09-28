@@ -2,7 +2,8 @@ Rădescu Ioana
 
 # CUDA HashTable
 	
-	Acest proiect urmareste implementarea unei structuri de date tip hashtable folosind CUDA, avand ca target GPU Tesla K40.
+	Acest proiect urmareste implementarea unei structuri de date tip hashtable folosind CUDA, 
+	avand ca target GPU Tesla K40.
 
 # Implementare
 
@@ -37,41 +38,41 @@ Rădescu Ioana
 	doar adresa de inceput a acestui vector.
 
 # Output la performanțele obținute
--------------- Test T1 --------------
-OK       +10 pts         HASH_BATCH_INSERT, 1000000, inf, 80
-OK       +10 pts         HASH_BATCH_GET, 1000000, 100, 80.0051
-TOTAL    +20 pts
+	-------------- Test T1 --------------
+	OK       +10 pts         HASH_BATCH_INSERT, 1000000, inf, 80
+	OK       +10 pts         HASH_BATCH_GET, 1000000, 100, 80.0051
+	TOTAL    +20 pts
 
--------------- Test T2 --------------
-OK       +5 pts  HASH_BATCH_INSERT, 2000000, 66.6667, 80
-OK       +5 pts  HASH_BATCH_GET, 2000000, 200, 80.0026
-TOTAL    +10 pts
+	-------------- Test T2 --------------
+	OK       +5 pts  HASH_BATCH_INSERT, 2000000, 66.6667, 80
+	OK       +5 pts  HASH_BATCH_GET, 2000000, 200, 80.0026
+	TOTAL    +10 pts
 
--------------- Test T3 --------------
-OK       +5 pts  HASH_BATCH_INSERT, 2000000, 100, 80
-OK       +5 pts  HASH_BATCH_INSERT, 2000000, 100, 80
-OK       +5 pts  HASH_BATCH_GET, 2000000, 100, 80.0013
-OK       +5 pts  HASH_BATCH_GET, 2000000, 100, 80.0013
-TOTAL    +20 pts
+	-------------- Test T3 --------------
+	OK       +5 pts  HASH_BATCH_INSERT, 2000000, 100, 80
+	OK       +5 pts  HASH_BATCH_INSERT, 2000000, 100, 80
+	OK       +5 pts  HASH_BATCH_GET, 2000000, 100, 80.0013
+	OK       +5 pts  HASH_BATCH_GET, 2000000, 100, 80.0013
+	TOTAL    +20 pts
 
--------------- Test T4 --------------
-OK       +5 pts  HASH_BATCH_INSERT, 2500000, 250, 80
-OK       +5 pts  HASH_BATCH_INSERT, 2500000, 62.5, 80
-OK       +5 pts  HASH_BATCH_INSERT, 2500000, 50, 80
-OK       +5 pts  HASH_BATCH_INSERT, 2500000, 50, 80
-OK       +5 pts  HASH_BATCH_GET, 2500000, 125, 80.0005
-OK       +5 pts  HASH_BATCH_GET, 2500000, 250, 80.0005
-OK       +5 pts  HASH_BATCH_GET, 2500000, 125, 80.0005
-OK       +5 pts  HASH_BATCH_GET, 2500000, 125, 80.0005
-TOTAL    +40 pts
+	-------------- Test T4 --------------
+	OK       +5 pts  HASH_BATCH_INSERT, 2500000, 250, 80
+	OK       +5 pts  HASH_BATCH_INSERT, 2500000, 62.5, 80
+	OK       +5 pts  HASH_BATCH_INSERT, 2500000, 50, 80
+	OK       +5 pts  HASH_BATCH_INSERT, 2500000, 50, 80
+	OK       +5 pts  HASH_BATCH_GET, 2500000, 125, 80.0005
+	OK       +5 pts  HASH_BATCH_GET, 2500000, 250, 80.0005
+	OK       +5 pts  HASH_BATCH_GET, 2500000, 125, 80.0005
+	OK       +5 pts  HASH_BATCH_GET, 2500000, 125, 80.0005
+	TOTAL    +40 pts
 
-TOTAL gpu_hashtable  90/90
+	TOTAL gpu_hashtable  90/90
 
-- Concluzii:
+# Concluzii:
 
-		In cadrul acestui program se utilizeaza thread-uri CUDA pentru inserarea in HashTable
-	si pentru cautarea valorilor asociate unor chei. Acest lucru duce la o crestere semnificativa
-	a performatei obtinute.
+		In cadrul acestui program se utilizeaza thread-uri CUDA pentru inserarea in HashTable 
+		si pentru cautarea valorilor asociate unor chei. Acest lucru duce la o crestere semnificativa
+		a performatei obtinute.
 		Din output-ul obtinut se observa ca performanta scade in momentul in care este necesara 	
-	realizarea
-	unei operatii de reshape. Totodata, aceasta depinde si numarul de iteratii necesare la inserare sau 		cautare.
+		realizarea unei operatii de reshape. 
+		Totodata, aceasta depinde si numarul de iteratii necesare la inserare sau cautare.
